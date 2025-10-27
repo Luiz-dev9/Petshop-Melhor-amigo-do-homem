@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetShop | Encontre o seu melhor amigo!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Petshop</h1>
+
+    <!-- Botão hambúrguer (visível apenas no mobile) -->
+    <button id="menu-btn" class="menu-btn" aria-label="Abrir menu">
+      ☰
+    </button>
+
+    <!-- Menu de navegação -->
+    <nav id="nav-bar" class="nav-bar">
+      <a href="#">Início</a>
+      <a href="#">Meio</a>
+      <a href="#">Fim</a>
+    </nav>
+  </header>
+
+  <!-- Seção da logo -->
+  <section class="logo">
+    <img src="./img/Captura de tela 2025-10-27 185054.png" alt="Logo do Petshop">
+  </section>
+
+ <main class="cards-container">
+
+  <!-- Card 1 -->
+  <div class="card card-azul">
+    <div class="card-texto">
+      <h3>Quero adotar um animalzinho</h3>
+      <p>Está procurando um bichinho para adotar? Então é só clicar no botão abaixo e ver nossos pets lindos!</p>
+      <button class="btn azul"><a href="">Procurar</a></button>
+    </div>
+    <img src="" alt="Imagem de pet" class="card-img">
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card card-vermelho">
+    <h2 class="titulo-destaque">Dicas <span>Adota <strong>Pet</strong></span></h2>
+    <img src="./img/cao.jpeg" alt="">
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card card-vermelho">
+    <h3>Sou cidadão e quero cadastrar um pet para adoção</h3>
+    <p>Veja aqui como colocar um animalzinho para adoção.</p>
+    <button class="btn vermelho"><a href="./pages/form.html">Acessar</a></button>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="card card-azul">
+    <p>Tem dúvidas sobre os direitos dos animais? Você pode falar diretamente com a OAB. É só clicar abaixo e mandar sua dúvida que a OAB te responde.</p>
+    <button class="btn azul">Acessar</button>
+  </div>
+
+</main>
+
+<h3>Nossas <strong>estrelas</strong></h3>
+<section class="pet">
+
+    <article class="adota">
+        <img src="./img/gato.jpg" alt="Foto do Spok, gato macho de 5 anos">
+        <h4>Spok</h4>
+        <p>Macho, 5 anos de idade</p>
+        <p>Mimoso por natureza, muito carinhoso e cheio de amor para dar. Simplesmente não consegue ficar sem subir no colo.</p>
+        <a href="./pages/adota.html" class="btn">Disponível para adoção</a>
+    </article>
+
+    <article class="adota">
+        <img src="./img/pastor.jpg" alt="Foto da Luna, gata fêmea de 3 anos">
+        <h4>Luna</h4>
+        <p>Fêmea, 3 anos de idade</p>
+        <p>Extremamente brincalhona e curiosa. Adora companhia e se adapta bem a lares com crianças.</p>
+        <a href="./pages/adota.html" class="btn">Disponível para adoção</a>
+    </article>
+
+    <article class="adota">
+        <img src="./img/thor.avif" alt="Foto do Thor, cachorro macho de 2 anos">
+        <h4>Thor</h4>
+        <p>Macho, 2 anos de idade</p>
+        <p>Cachorro cheio de energia, ama longas caminhadas e brincar no parque. Muito leal e carinhoso.</p>
+        <a href="./pages/adota.html" class="btn">Disponível para adoção</a>
+    </article>
+
+    <article class="adota">
+        <img src="./img/bella.jpg" alt="Foto da Bella, cadela fêmea de 4 anos">
+        <h4>Bella</h4>
+        <p>Fêmea, 4 anos de idade</p>
+        <p>Calma e afetuosa, perfeita para quem busca uma companhia tranquila. Adora receber carinho e atenção.</p>
+        <a href="./pages/adota.html" class="btn">Disponível para adoção</a>
+    </article>
+</section>
+
+
+
+  <!-- Script JS -->
+  <script src="./js/logica.js"></script>
+</body>
+</html>
