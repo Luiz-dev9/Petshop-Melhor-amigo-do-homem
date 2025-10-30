@@ -3,12 +3,14 @@ const API = 'http://localhost:3000';
 const menuBtn = document.getElementById("menu-btn");
 const navBar = document.getElementById("nav-bar");
 
-menuBtn.addEventListener("click", () => {
-  navBar.classList.toggle("active");
-});
+if (menuBtn && navBar) {
+  menuBtn.addEventListener("click", () => {
+    navBar.classList.toggle("active");
+  });
+}
 
 // Salva o animal selecionado
-function selecionarAnimal(nome){
+function selecionarAnimal(nome) {
   localStorage.setItem("animalSelecionado", nome);
 }
 
@@ -20,45 +22,43 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Validação e envio do formulário
-document.getElementById("formulario").addEventListener('submit', async function(e){
-  e.preventDefault();
+const form = document.getElementById("formulario");
+if (form) {
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
 
-  const nome = document.getElementById("nome").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const telefone = document.getElementById("tele").value.trim();
-  const animal = document.getElementById("animal").value.trim();
-  const motivo = document.getElementById("motivo").value.trim();
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const telefone = document.getElementById("telefone").value.trim();
+    const animal = document.getElementById("animal").value.trim();
+    const motivo = document.getElementById("motivo").value.trim();
 
-  if(!nome || !email || !telefone || !animal || !motivo){
-    alert("Preencha todos os campos");
-    return;
-  }
-
-  try {
-    const response = await fetch(`${API}/cadastro`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ nome, email, telefone, animal, motivo })
-    });
-
-    let dados;
-    try {
-      dados = await response.json();
-    } catch {
-      dados = {};
-    }
-
-    if(!response.ok){
-      alert(dados.error || "Erro ao cadastrar usuário");
+    if (!nome || !email || !telefone || !animal || !motivo) {
+      alert("Preencha todos os campos");
       return;
     }
 
-    alert("Cadastro realizado com sucesso!");
-    document.getElementById("formulario").reset();
-    localStorage.removeItem("animalSelecionado");
+    try {
+      const banco = await fetch(`${API}/cadastro`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nome, email, telefone, animal, motivo })
+      });
 
-  } catch(error){
-    console.error(error);
-    alert(error.message || "Erro ao conectar ao servidor");
-  }
-});
+      const dados = await banco.json();
+
+      if (!banco.ok) {
+        alert(dados.error || "Erro ao cadastrar o usuário");
+        return; // ⚠️ evita mostrar o alerta de sucesso
+      }
+
+      alert("Seu cadastro foi realizado com sucesso! Agradecemos o seu interesse em adotar um amigo peludo.");
+      form.reset();
+      localStorage.removeItem("animalSelecionado");
+
+    } catch (error) {
+      console.error("Erro ao conectar ao servidor", error);
+      alert("Não foi possível conectar ao servidor. Verifique se o backend está rodando em http://localhost:3000");
+    }
+  });
+}
