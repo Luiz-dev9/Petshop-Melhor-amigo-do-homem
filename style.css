@@ -62,6 +62,10 @@ header {
   z-index: 100; /* Garante que o header fique acima de outros elementos */
 }
 
+.principal h1{
+  text-align: center;
+}
+
 header h1 {
   color: var(--color-text-light);
   font-size: 1.8rem;
@@ -332,7 +336,183 @@ header h1 {
   transform: scale(0.97);
 }
 
-/* ====== RESPONSIVIDADE ====== */
+.projeto{
+    margin-top: 20px;
+}
+
+
+.projeto h4{
+    color: #00c2f2;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+:root {
+  --primary-color: #3f51b5; 
+  --secondary-color: #f44336; 
+  --text-light: #ffffff;
+  --text-dark: #cccccc;
+  --bg-dark: #2c3e50; 
+  --bg-medium: #34495e; 
+}
+
+.site-footer {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding-top: 40px;
+  font-family: 'Arial', sans-serif; 
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 30px; 
+  border-bottom: 1px solid var(--bg-medium); 
+}
+
+.footer-section {
+  flex: 1; 
+  min-width: 250px; 
+  margin: 15px 10px;
+}
+
+.section-title {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block; 
+}
+
+
+.section-title i {
+  margin-right: 8px;
+  font-size: 1.2em;
+}
+
+.section-text {
+  margin-bottom: 8px;
+  font-size: 1em;
+  line-height: 1.5;
+  color: var(--text-dark);
+}
+
+.section-text i {
+    color: var(--primary-color);
+    margin-right: 5px;
+    font-size: 1.1em;
+    vertical-align: middle;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px 0;
+  background-color: var(--bg-medium);
+  font-size: 0.9em;
+  color: var(--text-dark);
+}
+
+.home {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column; 
+  gap: 0.5rem; 
+
+  
+  align-items: flex-start; 
+}
+
+.home label {
+  font-weight: bold;
+  width: 100%; 
+  margin: 0;
+}
+
+.home select{
+  padding: 4px;
+  border-radius: 4px;
+}
+
+form{
+  width: 400px;
+  border: 2px solid #00c2f2;;
+  margin: 0px auto;
+  margin-top: 40px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+input, label{
+  display: flex;
+  font-weight: bold;
+}
+
+form h2{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input{
+  width: 99%;
+  padding: 6px;
+  margin: 3px;
+  border-radius: 7px;
+}
+
+textarea{
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  width: 100%;
+  height: 100px;
+}
+
+form button{
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #00b7eb;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  transition: all 1s;
+  font-size: 17px;
+}
+
+form button:hover{
+  background-color: #004d61;
+}
+
+
+@media (min-width: 600px) {
+  .home {
+    flex-direction: row; 
+    gap: 1rem; 
+    align-items: center; 
+  }
+
+  .home label {
+    width: auto; 
+  }
+
+ .home select{
+  width: 100%;
+ }
+}
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center; 
+  }
+
+  .section-title {
+    border-bottom: none;
+  }
+}
+
 @media (max-width: 600px) {
   .pet {
     flex-direction: column;
@@ -342,12 +522,10 @@ header h1 {
   .adota {
     width: 90%;
   }
+
+  
 }
 
-
-/* 8. Responsividade (Mobile) */
-
-/* Layout dos Cards em Mobile */
 @media (max-width: 768px) {
   .cards-container {
     grid-template-columns: 1fr;
@@ -355,7 +533,6 @@ header h1 {
   }
 }
 
-/* Menu de Navegação em Mobile */
 @media (max-width: 768px) {
   .menu-btn {
     display: block;

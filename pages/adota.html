@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adote seu amigo!!!</title>
+     <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>Petshop</h1>
+    </header>
+
+    <h4 style="margin-top:10px ;">Home > <strong>Adote um pet</strong></h4>
+
+    <div class="home">
+        <!--animal-->
+        <label for="">Animal</label>
+        <select name="" id="animal">
+            <option value="" disabled selected>Selecione</option>
+            <option value="">Cachorro</option>
+            <option value="">Gato</option>
+        </select>
+
+        <label for="">Sexo</label>
+        <select name="" id="sexo">
+            <option value="" disabled selected>Selecione</option>
+            <option value="">Masculino</option>
+            <option value="">Ferminino</option>
+        </select>
+
+        <label for="">Idade</label>
+        <select name="" id="idade">
+             <option value="" disabled selected>Selecione</option>
+            <option value="">0 a 1 ano</option>
+            <option value="">mais de um ano</option>
+        </select>
+
+        <label for="">Porte</label>
+        <select name="" id="porte">
+
+            <option value="" disabled selected>Selecione</option>
+            <option value="">Pequeno</option>
+            <option value="">medio</option>
+            <option value="">Grande</option>
+            <option value=""></option>
+        </select>
+
+        <label for="">Cor da pelagem</label>
+        <select name="" id="Cor">
+             <option value="" disabled selected>Selecione</option>
+            <option value="">Branco</option>
+            <option value="">Preto</option>
+            <option value="">marron</option>
+            <option value="">Cinza</option>
+        </select>
+    </div>
+
+    <section class="pet">
+
+    <article class="adota gato">
+        <img src="../img/gato.jpg" alt="Foto do Spok, gato macho de 5 anos">
+        <h4>Spok</h4>
+        <p>Macho, 5 anos de idade</p>
+        <p>Mimoso por natureza, muito carinhoso e cheio de amor para dar. Simplesmente não consegue ficar sem subir no colo.</p>
+        <a href="./form.html" class="btn" onclick="selecionarAnimal('Spok')">Disponível para adoção</a>
+    </article>
+
+    <article class="adota gato">
+        <img src="../img/pastor.jpg" alt="Foto da Luna, gata fêmea de 3 anos">
+        <h4>Luna</h4>
+        <p>Fêmea, 3 anos de idade</p>
+        <p>Extremamente brincalhona e curiosa. Adora companhia e se adapta bem a lares com crianças.</p>
+        <a href="./form.html" class="btn" onclick="selecionarAnimal('Luna')">Disponível para adoção</a>
+    </article>
+
+    <article class="adota cachorro">
+        <img src="../img/thor.avif" alt="Foto do Thor, cachorro macho de 2 anos">
+        <h4>Thor</h4>
+        <p>Macho, 2 anos de idade</p>
+        <p>Cachorro cheio de energia, ama longas caminhadas e brincar no parque. Muito leal e carinhoso.</p>
+        <a href="./form.html" class="btn" onclick="selecionarAnimal('Thor')">Disponível para adoção</a>
+    </article>
+
+    <article class="adota cachorro">
+        <img src="../img/bella.jpg" alt="Foto da Bella, cadela fêmea de 4 anos">
+        <h4>Bella</h4>
+        <p>Fêmea, 4 anos de idade</p>
+        <p>Calma e afetuosa, perfeita para quem busca uma companhia tranquila. Adora receber carinho e atenção.</p>
+        <a href="./form.html" class="btn" onclick="selecionarAnimal('Bella')">Disponível para adoção</a>
+    </article>
+
+    <article class="adota cachorro">
+        <img src="../img/mel.jpg" alt="Foto da Mel, cadela fêmea de 1 ano">
+        <h4>Mel</h4>
+        <p>Fêmea, 1 ano de idade</p>
+        <p>Cheia de energia e alegria, Mel adora correr e brincar. Ideal para famílias ativas que gostam de passeios ao ar livre.</p>
+        <a href="./form.html" class="btn" onclick="selecionarAnimal('Mel')">Disponível para adoção</a>
+    </article>
+
+    <article class="adota gato">
+        <img src="../img/thanos.jpg" alt="Foto do Thanos, gato macho de 3 anos">
+        <h4>Thanos</h4>
+        <p>Macho, 3 anos de idade</p>
+        <p>Curioso e esperto, Thanos é o tipo de gato que gosta de estar por perto e observar tudo. Um verdadeiro companheiro para o dia a dia.</p>
+        <a href="./form.html" class="btn" onclick="selecionarAnimal('Thanos')">Disponível para adoção</a>
+    </article>
+
+    <article class="adota cachorro">
+        <img src="../img/cadela.webp" alt="Foto da Lara, cadela fêmea de 2 anos">
+        <h4>Lara</h4>
+        <p>Fêmea, 2 anos de idade</p>
+        <p>Carinhosa e obediente, Lara é muito dócil e se dá bem com outros animais. Ama um bom cafuné e cochilos ao sol.</p>
+        <a href="./form.html" class="btn" onclick="selecionarAnimal('Lara')">Disponível para adoção</a>
+    </article>
+
+    <article class="adota gato">
+        <img src="../img/macho.jpg" alt="Foto do Nino, gato macho de 6 meses">
+        <h4>Nino</h4>
+        <p>Macho, 6 meses de idade</p>
+        <p>Filhote brincalhão e curioso, Nino está cheio de energia e ama explorar o ambiente. Perfeito para quem busca um novo amigo cheio de vida.</p>
+        <a href="./form.html" class="btn" onclick="selecionarAnimal('Nino')">Disponível para adoção</a>
+    </article>
+
+</section>
+
+
+<footer class="site-footer">
+  <div class="footer-content">
+    
+    <section class="footer-section availability">
+      <h3 class="section-title">
+        <i class="bi bi-alarm-fill"></i>
+        Atendimento
+      </h3>
+      <p class="section-text">24 Horas / 7 Dias por Semana</p>
+    </section>
+
+    <section class="footer-section contact-info">
+      <h3 class="section-title">Contato</h3>
+      <p class="section-text phone">
+        <i class="bi bi-telephone-fill"></i>
+        (81) 99999-9999
+      </p>
+      <p class="section-text address">
+        <i class="bi bi-geo-alt-fill"></i>
+        Rua Avenida Recife, Cidade/Estado
+      </p>
+    </section>
+    
+    </div>
+
+  <div class="footer-bottom">
+      <p>&copy; 2025 Nome da Empresa. Todos os direitos reservados.</p>
+      <p>Desenvolvido por <a href="">Luiz_dev</a></p>
+  </div>
+</footer>
+
+
+
+   
+<script src="../js/logica.js"></script>
+</body>
+</html>

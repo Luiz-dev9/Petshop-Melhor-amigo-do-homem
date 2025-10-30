@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adote seu amigo</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header>
+  <h1>Petshop</h1>
+</header>
+
+<form id="formulario">
+  <h2>Venha dar uma oportunidade de amor e um novo lar para um pet em adoção ❤️</h2>
+
+  <label for="">Nome</label>
+  <input id="nome" type="text" placeholder="Digite seu nome" required>
+
+  <label for="">Email</label>
+  <input id="email" type="email" placeholder="Digite o seu email" required>
+
+  <label for="">Telefone</label>
+  <input id="tele" type="tel" placeholder="Digite seu telefone" required>
+
+  <label for="animal">Animal escolhido:</label>
+  <input type="text" id="animal" readonly>
+
+  <label for="motivo">Por que você quer adotá-lo?</label>
+  <textarea id="motivo" rows="4" placeholder="Opcional"></textarea>
+
+  <button type="submit">Enviar</button>
+</form>
+
+<script>
+    //temporario
+  document.addEventListener("DOMContentLoaded", () => {
+    const animalSelecionado = localStorage.getItem("animalSelecionado");
+
+    if (animalSelecionado) {
+        const campoAnimal = document.getElementById("animal");
+        if (campoAnimal) campoAnimal.value = animalSelecionado;
+    }
+  });
+</script>
+<script src="../js/logica.js"></script>
+
+</body>
+</html>
